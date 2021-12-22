@@ -1,31 +1,25 @@
+import 'package:bytebank/screens/transferencia/lista.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: Column(
-        children: const [
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.monetization_on),
-              title: Text('100.0'),
-              subtitle: Text('1000'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.monetization_on),
-              title: Text('200.0'),
-              subtitle: Text('1000'),
-            ),
-          ),
-        ],
+  runApp(BytebankApp());
+}
+
+class BytebankApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.green,
+        ).copyWith(
+          secondary: Colors.blueAccent[700],
+        ),
+        buttonTheme: ButtonThemeData(
+            buttonColor: Colors.blueAccent[700],
+            textTheme: ButtonTextTheme.primary),
       ),
-      appBar: AppBar(title: const Text('Transferências'),),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
-    ),
-  ));
+      home: ListaTransferencias(),
+    );
+  }
 }
