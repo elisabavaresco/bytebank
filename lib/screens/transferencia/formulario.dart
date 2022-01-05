@@ -1,4 +1,4 @@
-import 'package:bytebank/coponents/editor.dart';
+import 'package:bytebank/components/editor.dart';
 import 'package:bytebank/models/transferencia.dart';
 import 'package:flutter/material.dart';
 
