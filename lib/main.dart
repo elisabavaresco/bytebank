@@ -18,7 +18,7 @@ class BytebankApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             backgroundColor:
-                MaterialStateProperty.all<Color>(Colors.blueAccent.shade700),
+                MaterialStateProperty.all<Color>(Colors.green.shade900),
           ),
         ),
       ),
